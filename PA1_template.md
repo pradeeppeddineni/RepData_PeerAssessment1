@@ -36,7 +36,7 @@ What is mean total number of steps taken per day?
 
     b
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](instructions_fig/unnamed-chunk-3-1.png)
 
 here i have tried to achieve having an legend with those mean and median
 variable values in ggplot but couldnt succeed however in a base hist
@@ -68,7 +68,7 @@ What is the average daily activity pattern?
                      geom_line()
     stepline  
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](instructions_fig/unnamed-chunk-5-1.png)
 
     #The 5-min time interval contains the maximum number of steps?
     stepsInterval[which.max(stepsInterval$steps),c("interval")]
@@ -114,7 +114,7 @@ Imputing missing values
                 geom_histogram(binwidth = 2000)
     histplot 
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](instructions_fig/unnamed-chunk-10-1.png)
 
     #New Mean and median for values with out nulls
 
@@ -147,7 +147,7 @@ Are there differences in activity patterns between weekdays and weekends?
     plot <- ggplot(data = finalactivityimpute,aes(x=interval,y=steps))
     plot + geom_line() + facet_wrap(~day,nrow=2)
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![](instructions_fig/unnamed-chunk-13-1.png)
 
 Here i did have some issue using "keep\_md: true" statement Error in
 yaml::yaml.load(enc2utf8(string), ...) : Scanner error: mapping values
